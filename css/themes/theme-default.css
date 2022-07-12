@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Finlandica&display=swap");
+
+:root {
+  --Bg: #f7f7f7;
+  --Border: #c4c4c6;
+  --Border-light: #dfdfdf;
+  --Shade: #4c4b4c;
+  --Tint: #ffffff;
+
+  --Red: #fe5f52;
+  --Red-border: #cf4135;
+  --Yellow: #febf05;
+  --Yellow-border: #cc991a;
+  --Green: #14cd34;
+  --Green-border: #26a23b;
+  --Purple: #7558d3;
+  --Purple-border: #5d46ad;
+
+  --Theme: #ee7448;
+  --Theme-tint: #e48562;
+  --Theme-shade: #d8704e;
+
+  --Font: "Finlandica", sans-serif;
+}

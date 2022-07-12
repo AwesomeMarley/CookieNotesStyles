@@ -1,0 +1,176 @@
+#cookieNotesOfficial_mainHTML {
+  z-index: 1000 !important;
+}
+
+#cookieNotesOfficial_mainHTML > * {
+  font-family: var(--Font) !important;
+}
+
+body {
+  transform: translateY(30px);
+}
+
+.menu_container *,
+.menu_container *::after,
+.menu_container *::before {
+  box-sizing: border-box;
+  position: relative;
+  z-index: 10000;
+}
+
+.menu_container ul,
+.menu_container li {
+  list-style: none;
+}
+
+.menu_container {
+  animation: menu_container_animation 500ms ease-in-out;
+}
+
+  @keyframes menu_container_animation {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.options_bar,
+.dropdown_menu {
+  position: fixed;
+}
+
+.options_bar {
+  background-color: var(--Bg);
+  border-bottom: 1px solid var(--Bg);
+  left: 0;
+  top: 0;
+  height: 25px;
+  width: 100vw;
+  z-index: 2;
+}
+
+.options_bar_li {
+}
+
+.options_bar_btn {
+  margin: 0px 2px 0 2px;
+  background-color: var(--Bg);
+  transition: 200ms;
+  border: none;
+  border-radius: 5px;
+}
+
+.options_bar_btn:hover {
+  background-color: var(--Border-light);
+}
+
+.edit_bar {
+  background-color: var(--Bg);
+  border-bottom: 1px solid var(--Border);
+  top: 25px;
+  height: 25px;
+  width: 100vw;
+  z-index: 1;
+  box-shadow: 0px 5px 11px -8px rgba(0, 0, 0, 0.3);
+}
+
+.list_expandable::after {
+  content: "\f0da";
+  font-family: FontAwesome;
+  float: right;
+  transform: translateX(-5px);
+}
+
+/* File Menu Text */
+.options_bar > ul {
+  padding: 0 5px 0px 5px;
+  display: flex;
+}
+
+.options_bar > ul > li {
+  margin-right: 10px;
+}
+
+.parent_dropdown {
+  --top-bar-height-padding: 26px;
+  top: var(--top-bar-height-padding);
+}
+
+.child_dropdown {
+  position: absolute;
+  top: -2px;
+  left: 200px;
+}
+
+.child_dropdown > ul {
+  padding-left: 0;
+}
+
+.dropdown_menu {
+  display: none;
+  width: 200px;
+  background-color: var(--Bg);
+  border: 1px solid var(--Border);
+  /* border-radius: 2px 7px 7px 7px; */
+  border-radius: 5px;
+  box-shadow: 0px 5px 7px 3px rgba(0,0,0,0.05);
+  z-index: 10;
+}
+
+.dropdown_menu > #child_menu {
+  width: 100%;
+}
+
+.dropdown_menu span {
+  pointer-events: none;
+}
+
+/* Styles all dropdown menu list items */
+.dropdown_menu li {
+  z-index: 100;
+  --Padding-left-value: 10px;
+  padding-left: var(--Padding-left-value);
+  width: calc(100% - var(--Margin-left-value));
+  background-color: var(--Bg);
+  color: black;
+}
+
+.menu_item_active {
+  background: var(--Purple) !important;
+  color: white !important;
+}
+
+/* Styles all dropdown menu list items on hover */
+.dropdown_menu li:hover {
+  background: var(--Purple);
+  color: white;
+}
+
+.menu_container hr {
+  width: 90%;
+  margin: 8px 0% 8px 5%;
+}
+
+/* Styles all of the last dropdown menu list items on hover */
+/* .dropdown_menu > li:hover:last-child:not(div):not(ul),
+.dropdown_menu > ul > li:hover:last-child:not(div):not(ul) {
+  border-radius: 0px 0px 5px 5px;
+}
+
+/* Styles all of the first dropdown menu list items on hover */
+/*
+.dropdown_menu > li:hover:first-child:not(div):not(ul),
+.dropdown_menu > ul > li:hover:first-child:not(div):not(ul) {
+  border-radius: 5px 5px 0px 0px;
+} */
+
+.dropdown_menu li:last-child {
+  border-radius: 0 0 4px 4px;
+}
+.dropdown_menu li:first-child {
+  border-radius: 4px 4px 0 0;
+}
